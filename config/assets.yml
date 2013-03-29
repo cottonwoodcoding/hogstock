@@ -1,0 +1,8 @@
+js:
+  base:
+    #- base js file
+  #other section that doesn't need to be base js
+    #- other file that is in this section
+css:
+  base:
+    #- css files that need to be in base
