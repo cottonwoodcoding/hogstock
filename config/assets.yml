@@ -1,6 +1,6 @@
 js:
   base:
-    - bootstrap.js
+    - bootstrap.min.js
   #other section that doesn't need to be base js
     #- other file that is in this section
 css:
