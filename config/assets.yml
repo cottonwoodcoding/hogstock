@@ -1,8 +1,9 @@
 js:
   base:
-    #- base js file
+    - bootstrap.js
   #other section that doesn't need to be base js
     #- other file that is in this section
 css:
   base:
-    #- css files that need to be in base
+    - bootstrap.min.css
+    - bootstrap-responsive.min.css 
