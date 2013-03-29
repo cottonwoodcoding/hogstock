@@ -1,5 +1,5 @@
 class Hogstock < Sinatra::Application
   get '/' do
-    "Hogstock & Two Smokin' Barrels"
+    haml :index
   end
 end
