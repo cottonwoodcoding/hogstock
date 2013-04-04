@@ -3,8 +3,6 @@ js:
     - bootstrap.min.js
     - jquery.easing.1.3.js
     - menu.js
-  #other section that doesn't need to be base js
-    #- other file that is in this section
 css:
   base:
     - bootstrap.min.css
