@@ -1,9 +1,11 @@
 js:
   base:
     - bootstrap.min.js
+    - menu.js
   #other section that doesn't need to be base js
     #- other file that is in this section
 css:
   base:
     - bootstrap.min.css
-    - bootstrap-responsive.min.css 
+    - bootstrap-responsive.min.css
+    - hogstock.css 

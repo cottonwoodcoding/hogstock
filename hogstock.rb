@@ -1,3 +1,9 @@
+require 'rubygems'
+require 'sinatra'
+require 'sinatra/minify'
+require 'rack/contrib'
+require 'yaml'
+require 'haml'
 require File.expand_path(File.dirname(__FILE__) + '/lib/helpers/html')
 
 class Hogstock < Sinatra::Application
