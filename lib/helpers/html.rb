@@ -17,6 +17,16 @@ module Sinatra::HtmlHelpers
           </a>
         </li>
         <li>
+          <a href="#">
+            <img src="images/smoking.jpeg" alt=""/>
+            <span class="sdt_active"></span>
+            <span class="sdt_wrap">
+              <span class="sdt_link">Menu</span>
+              <span class="sdt_descr">Catering Menu</span>
+            </span>
+          </a>
+        </li>
+        <li>
          <a href="#">
           <img src="images/fire.png" alt=""/>
           <span class="sdt_active"></span>
