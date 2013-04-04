@@ -10,3 +10,4 @@ css:
     - bootstrap.min.css
     - bootstrap-responsive.min.css
     - hogstock.css 
+    - menu.css
