@@ -3,10 +3,13 @@
   %head
     %title Hogstock & Two Smokin' Barrels
     = css_assets 'base'
-    #header
-      %h1
-        = "Hogstock & Two Smokin' Barels"
-  %body
-    = nav_menu
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  = js_assets 'base'
+  .row-fluid
+    .span12.offset4
+      #header
+        %img{ :src => "/images/hogstocklogo.jpg" }
+  .row-fluid
+    .span12.offset4
+      %body
+        = nav_menu
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      = js_assets 'base'
