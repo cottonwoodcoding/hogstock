@@ -18,9 +18,9 @@ $(function() {
              .animate({'height':'70px'},300,function(){
             var $sub_menu = $elem.find('.sdt_box');
             if($sub_menu.length){
-                var right = '170px';
+                var left = '170px';
                 if($elem.parent().children().length == $elem.index()+1)
-                    right = '-170px';
+                    left = '170px';
                 $sub_menu.show().animate({'left':left},200);
             }   
         });
