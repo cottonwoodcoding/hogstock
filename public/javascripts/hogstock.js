@@ -11,8 +11,7 @@
           var $content;
           $('#content_row').append(data);
           $content = $('#content');
-          $content.css('margin-top', '2000px');
-          $content.css('text-align', 'center');
+          $content.css('margin-top', '2000px').css('text-align', 'center');
           return $.get("/" + item, function(data) {
             $(data).appendTo($content);
             $("html, body").animate({

@@ -8,8 +8,7 @@ $ ->
       $.get "/content", (data) ->
         $('#content_row').append(data)
         $content = $('#content')
-        $content.css('margin-top', '2000px')
-        $content.css('text-align', 'center')
+        $content.css('margin-top', '2000px').css('text-align', 'center')
         $.get "/#{item}", (data) ->
           $(data).appendTo($content)
           $("html, body").animate
