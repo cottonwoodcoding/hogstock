@@ -19,3 +19,8 @@ body {
 
 #header img {
   width: 350px; }
+
+#content {
+  margin-top: 2000px;
+  text-align: center;
+  width: 100%; }
