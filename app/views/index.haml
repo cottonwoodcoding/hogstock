@@ -5,11 +5,11 @@
     = css_assets 'base'
   %body
     .row-fluid
-      %span#header.span6
-        %img{ :src => "/images/hogstocklogo.png" }
-    .row-fluid
-      .span12.offset3
-        = nav_menu
+      .container
+        %span#header.span4
+          %img{ :src => "/images/hogstocklogo.png" }
+        %span#menu.span6
+          = nav_menu
     .row-fluid
       #content.span12
         %img{ :src => "/images/pig.jpg" }

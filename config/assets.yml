@@ -3,6 +3,7 @@ js:
     - bootstrap.min.js
     - jquery.easing.1.3.js
     - menu.js
+    - hogstock.js
 css:
   base:
     - bootstrap.min.css
