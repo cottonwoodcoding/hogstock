@@ -22,7 +22,7 @@ module Sinatra::HtmlHelpers
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
               <span class="sdt_link">Menu</span>
-              <span class="sdt_descr">Catering Menu</span>
+              <span class="sdt_descr">Catering</span>
             </span>
           </a>
         </li>
@@ -41,8 +41,8 @@ module Sinatra::HtmlHelpers
           <img src="images/kisspig.jpg" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
-            <span class="sdt_link">Testimonials</span>
-            <span class="sdt_descr">Satisfied customers</span>
+            <span class="sdt_link">Contact</span>
+            <span class="sdt_descr">Questions?</span>
          </span>
           </a>
         </li>
@@ -51,8 +51,8 @@ module Sinatra::HtmlHelpers
           <img src="images/pig1.jpg" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
-            <span class="sdt_link">Contact</span>
-            <span class="sdt_descr">Questions or comments?</span>
+            <span class="sdt_link">Testimonials</span>
+            <span class="sdt_descr">Satisfied customers</span>
           </span>
           </a>
         </li>
