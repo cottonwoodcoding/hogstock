@@ -7,7 +7,7 @@ module Sinatra::HtmlHelpers
     <<-NAV
       <ul id="sdt_menu" class="sdt_menu">
         <li>
-          <a href="#">
+          <a href="#" id="home">
             <img src="images/ribs.jpeg" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
@@ -17,7 +17,7 @@ module Sinatra::HtmlHelpers
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="Menu">
             <img src="images/smoking.jpeg" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
@@ -27,7 +27,7 @@ module Sinatra::HtmlHelpers
           </a>
         </li>
         <li>
-         <a href="#">
+         <a href="#" id="photos">
           <img src="images/fire.png" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
@@ -37,7 +37,7 @@ module Sinatra::HtmlHelpers
           </a>
         </li>
         <li>
-         <a href="#">
+         <a href="#" id="testimonials">
           <img src="images/kisspig.jpg" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
@@ -47,7 +47,7 @@ module Sinatra::HtmlHelpers
           </a>
         </li>
         <li>
-         <a href="#">
+         <a href="#" id="contact">
           <img src="images/pig1.jpg" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
