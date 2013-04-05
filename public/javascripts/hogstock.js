@@ -10,7 +10,6 @@
         e.preventDefault();
         return $.get("/" + item, function(data) {
           $content.html(data);
-          alert("Load was performed.");
           $("html, body").animate({
             scrollTop: $content.offset().top
           }, "slow");
