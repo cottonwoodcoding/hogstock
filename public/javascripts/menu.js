@@ -11,11 +11,11 @@ $(function() {
              .andSelf()
              .find('.sdt_wrap')
              .stop(true)
-             .animate({'top':'140px'},500,'easeOutBack')
+             .animate({'top':'100px'},500,'easeOutBack')
              .andSelf()
              .find('.sdt_active')
              .stop(true)
-             .animate({'height':'170px'},300,function(){
+             .animate({'height':'70px'},300,function(){
             var $sub_menu = $elem.find('.sdt_box');
             if($sub_menu.length){
                 var right = '170px';
