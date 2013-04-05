@@ -2,7 +2,7 @@
 %html
   %head
     %title Hogstock & Two Smokin' Barrels
-    = css_assets 'base'
+    <link href="/css/base.min.css" rel="stylesheet" type="text/css">
   %body
     .row-fluid
       .container
@@ -10,9 +10,6 @@
           %img{ :src => "/images/hogstocklogo.png" }
         %span#menu_holder.span7.offset1
           = nav_menu
-    .row-fluid
-      #content.span12
-        %span
-          = half_menu
+    #content_row.row-fluid
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    = js_assets 'base'
+    <script type="text/javascript" src="/javascripts/base.min.js"></script>

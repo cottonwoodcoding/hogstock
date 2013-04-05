@@ -22,4 +22,8 @@ class Hogstock < Sinatra::Application
   get '/testimonials' do
     haml :testimonials
   end
+
+  get '/content' do
+    haml :content
+  end
 end
