@@ -56,7 +56,7 @@ module Sinatra::HtmlHelpers
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
             <span class="sdt_link">Photos</span>
-            <span class="sdt_descr">See our work</span>
+            <span class="sdt_descr">See our food</span>
           </span>
           </a>
         </li>
