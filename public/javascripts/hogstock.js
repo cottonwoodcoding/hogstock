@@ -7,6 +7,7 @@
     menuAction = function(item) {
       return $("#" + item).bind('click', function(e) {
         e.preventDefault();
+        $('#content_row').empty();
         return $.get("/content", function(data) {
           var $content;
           $('#content_row').append(data);

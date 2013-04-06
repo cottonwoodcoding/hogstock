@@ -5,6 +5,7 @@ $ ->
   menuAction =  (item) ->
     $("##{item}").bind 'click', (e) ->
       e.preventDefault()
+      $('#content_row').empty()
       $.get "/content", (data) ->
         $('#content_row').append(data)
         $content = $('#content')
