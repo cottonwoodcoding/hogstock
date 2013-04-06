@@ -3,7 +3,7 @@ module Sinatra::HtmlHelpers
     Rack::Utils.escape_html(str)
   end
   
-  def half_menu
+  def vertical_menu
     <<-NAV
       <ul id="sdt_menu" class="sdt_menu">
         <li id="side_menu">
