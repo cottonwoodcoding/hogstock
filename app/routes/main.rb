@@ -12,7 +12,7 @@ class Hogstock < Sinatra::Application
   end
 
   get '/photos' do
-    haml :menu
+    haml :photos
   end
 
   get '/contact' do
