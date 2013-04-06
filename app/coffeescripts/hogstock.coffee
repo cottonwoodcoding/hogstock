@@ -1,4 +1,14 @@
 $ ->
+  slideshow = ->
+    $("#slides").slidesjs
+      width: 940
+      height: 528
+      play:
+        active: true
+        auto: true
+        interval: 4000
+        swap: true 
+
   menuLinks = ['home', 'menu', 'photos', 'testimonials', 'contact']
   $menu = $('#menu_holder')
 
@@ -9,9 +19,10 @@ $ ->
       $.get "/content", (data) ->
         $('#content_row').append(data)
         $content = $('#content')
-        $content.css('margin-top', '2000px').css('text-align', 'center')
+        $content.css('margin-top', '2000px').css('text-align', 'center').css('margin-bottom', '30px')
         $.get "/#{item}", (data) ->
           $(data).appendTo($content)
+          slideshow() if item == 'photos'
           $("html, body").animate
             scrollTop: $content.offset().top, "slow"
           $content.removeClass('hidden')
