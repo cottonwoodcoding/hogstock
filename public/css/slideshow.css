@@ -1,142 +1,88 @@
-    #slides {
-      display: none
+    .st_main img.st_preview{
+      width:70%;
+      height: 700px;
+
     }
 
-    #slides .slidesjs-navigation {
-      margin-top:5px;
+    .st_overlay{
+      width:100%;
+      height:100%;
+      position:fixed;
+      top:0px;
+      left:0px;
+      opacity:0.3;
     }
 
-    a.slidesjs-next,
-    a.slidesjs-previous,
-    a.slidesjs-play,
-    a.slidesjs-stop {
-      background-image: url(../images/btns-next-prev.png);
-      background-repeat: no-repeat;
-      display:block;
-      width:12px;
-      height:18px;
-      overflow: hidden;
-      text-indent: -9999px;
-      float: left;
-      margin-right:5px;
+    ul.st_navigation{
+      width: 100%;
+      list-style:none;
     }
 
-    a.slidesjs-next {
-      margin-right:10px;
-      background-position: -12px 0;
+    ul.st_navigation li {
+      float:left;
+      clear:both;
+      margin-bottom:8px;
+      position:relative;
+      width:100%;
     }
 
-    a:hover.slidesjs-next {
-      background-position: -12px -18px;
+    ul.st_navigation li span.st_link{
+      background-color:#000;
+      float:left;
+      position:relative;
+      padding:0px 20px;
+      -moz-box-shadow:0px 0px 2px #000;
+      -webkit-box-shadow:0px 0px 2px #000;
+      box-shadow:0px 0px 2px #000;
     }
 
-    a.slidesjs-previous {
-      background-position: 0 0;
+    ul.st_navigation li span.st_arrow_down,
+    ul.st_navigation li span.st_arrow_up{
+     margin-left:15px;
+      width:40px;
+      height:50px;
+      cursor:pointer;
+      -moz-box-shadow:0px 0px 2px #000;
+      -webkit-box-shadow:0px 0px 2px #000;
+      box-shadow:0px 0px 2px #000;
     }
 
-    a:hover.slidesjs-previous {
-      background-position: 0 -18px;
+    .st_wrapper{
+      width:100%;
+      height:126px;
+      overflow-y:hidden;
+      top:50px;
+      left:0px;
     }
 
-    a.slidesjs-play {
-      width:15px;
-      background-position: -25px 0;
+    .st_thumbs{
+      height:126px:
+      margin: 0;
     }
 
-    a:hover.slidesjs-play {
-      background-position: -25px -18px;
+    .st_thumbs img{
+      float:left;
+      margin:3px 3px 0px 0px;
+      cursor:pointer;
+      -moz-box-shadow:1px 1px 5px #000;
+      -webkit-box-shadow:1px 1px 5px #000;
+      box-shadow:1px 1px 5px #000;
+      opacity:0.7;
     }
 
-    a.slidesjs-stop {
-      width:18px;
-      background-position: -41px 0;
+    .st_about{
+      display:none;
+      position:absolute;
+      top:50px;
+      left:0px;
+      opacity:0.6;
     }
 
-    a:hover.slidesjs-stop {
-      background-position: -41px -18px;
+    .st_subcontent{
+      background:#000;
+      padding:30px;
+      -moz-box-shadow:0px 0px 10px #000;
+      -webkit-box-shadow:0px 0px 10px #000;
+      box-shadow:0px 0px 10px #000;
     }
 
-    .slidesjs-pagination {
-      margin: 7px 0 0;
-      float: right;
-      list-style: none;
-    }
-
-    .slidesjs-pagination li {
-      float: left;
-      margin: 0 1px;
-    }
-
-    .slidesjs-pagination li a {
-      display: block;
-      width: 13px;
-      height: 0;
-      padding-top: 13px;
-      background-image: url(../images/pagination.png);
-      background-position: 0 0;
-      float: left;
-      overflow: hidden;
-    }
-
-    .slidesjs-pagination li a.active,
-    .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
-    }
-
-    .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
-    }
-
-    #slides a:link,
-    #slides a:visited {
-      color: #333
-    }
-
-    #slides a:hover,
-    #slides a:active {
-      color: #9e2020
-    }
-
-    .navbar {
-      overflow: hidden
-    }
-
-    #slides {
-      display: none
-    }
-
-    .slideshow-container {
-      margin: 0 auto
-    }
-
-    /* For tablets & smart phones */
-    @media (max-width: 767px) {
-      body {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      .slideshow-container {
-        width: auto
-      }
-    }
-
-    /* For smartphones */
-    @media (max-width: 480px) {
-      .slideshow-container {
-        width: auto
-      }
-    }
-
-    /* For smaller displays like laptops */
-    @media (min-width: 768px) and (max-width: 979px) {
-      .slideshow-container {
-        width: 724px
-      }
-    }
-
-    /* For larger displays */
-    @media (min-width: 1200px) {
-      .slideshow-container {
-        width: 1170px
-      }
-    }
