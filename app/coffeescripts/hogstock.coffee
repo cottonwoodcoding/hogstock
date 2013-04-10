@@ -49,9 +49,17 @@ $ ->
       left = (e.pageX - $outer.offset().left) * (containerWidth - divWidth) / divWidth - extra
       $outer.scrollLeft left
 
+  sideHomeHandler = ->
+    $('#side_home').bind 'click', (e) ->
+      e.preventDefault()
+      $("html, body").animate
+        scrollTop: 0, "slow", ->
+          $('#content_row').empty()
+
   menuLinks = ['home', 'menu', 'photos', 'contact', 'testimonials']
 
   sideMenuAction = (item) ->
+    sideHomeHandler()
     $("##{item}_side").bind 'click', (e) ->
       e.preventDefault()
       $('#content_container').empty()
@@ -94,6 +102,8 @@ $ ->
           if item == 'photos'
             buildThumbs()
             thumbClickHandler()
+          if item == 'contact'
+            contactHandler()
           $("html, body").animate
             scrollTop: $content.offset().top, "slow"
           $content.removeClass('hidden')
@@ -104,3 +114,9 @@ $ ->
     $(@).css('margin-top', '100px')
   $menu.mouseout ->
     $(@).css('margin-top', '50px')
+
+  contactHandler = ->
+    $('#contact_form').bind 'submit', (e) ->
+      e.preventDefault()
+      $.post "/contact", (data) ->
+        $('#contact_info').html(data)
