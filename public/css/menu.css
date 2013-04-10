@@ -1,5 +1,5 @@
 ul.sdt_menu {
-  margin: 70px 0 0 auto;
+  margin: 0;
   padding: 0;
   list-style: none;
   font-family: "Myriad Pro", "Trebuchet MS", sans-serif;
@@ -107,3 +107,6 @@ ul.sdt_menu li div.sdt_box a:hover {
 
 #side_menu {
   margin-top: 100px; }
+
+.side-menu {
+  float: left; }

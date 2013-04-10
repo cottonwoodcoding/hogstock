@@ -5,7 +5,7 @@ module Sinatra::HtmlHelpers
   
   def vertical_menu
     <<-NAV
-      <ul id="sdt_menu" class="sdt_menu">
+      <ul id="sdt_menu" class="sdt_menu side-menu">
         <li id="side_menu">
           <a href="#" id="side_home">
             <span class="sdt_active"></span>
