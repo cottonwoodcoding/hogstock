@@ -5,12 +5,6 @@ $(function() {
     var wrap_height = '70px';
     $('#sdt_menu > li').bind('mouseenter',function(){
         var $elem = $(this);
-        if ($elem.hasClass('skip-image')) {
-          raise = '0px';
-          width = '0px';
-          height = '0px';
-          wrap_height = '0px';
-        }
         $elem.find('img')
              .stop(true)
              .animate({
