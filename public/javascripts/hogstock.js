@@ -3,7 +3,9 @@
   $(function() {
     var $menu, buildThumbs, item, makeScrollable, menuAction, menuLinks, thumbClickHandler, _i, _len;
     $(window).resize(function() {
-      return makeScrollable();
+      if ($("#st_nav").is(":visible")) {
+        return makeScrollable();
+      }
     });
     buildThumbs = function() {
       var $list;

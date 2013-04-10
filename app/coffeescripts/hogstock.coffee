@@ -1,6 +1,6 @@
 $ ->
   $(window).resize ->
-    makeScrollable()
+    makeScrollable() if $("#st_nav").is(":visible")
 
   buildThumbs = ->
     $list = $("#st_nav")

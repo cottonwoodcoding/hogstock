@@ -55,7 +55,7 @@ module Sinatra::HtmlHelpers
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
             <span class="sdt_link">Photos</span>
-            <span class="sdt_descr">See our food</span>
+            <span class="sdt_descr">See our work</span>
           </span>
           </a>
         </li>
@@ -82,6 +82,7 @@ module Sinatra::HtmlHelpers
       </ul>
     NAV
   end
+
   def thumbnails
     <<-THUMBS
       <div id="st_main" class="st_main" >
