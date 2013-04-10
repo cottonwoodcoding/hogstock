@@ -128,10 +128,8 @@
             $(data).appendTo($('#content_container'));
             sideMenuHandler();
             if (item === 'photos') {
-              Galeria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+              Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
               Galleria.run('#galleria');
-              buildThumbs();
-              thumbClickHandler();
             }
             if (item === 'contact') {
               contactHandler();

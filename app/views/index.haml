@@ -2,19 +2,13 @@
 %html
   %head
     %title Hogstock & Two Smokin' Barrels
-    = css_assets 'base'
+    <link href="/css/base.min.css" rel="stylesheet" type="text/css">
   %body
-    .row-fluid
-      .container
-        %span#header.span4
-          %img{ :src => "/images/hogstocklogo.png" }
-        %span#menu.span6
-          = nav_menu
-    .row-fluid
-      #content.span12
-        %span
-          = half_menu
-        %img{ :src => "/images/pig.jpg" }
+    .container
+      #logo
+        %img{ :src => "/images/hogstocklogo.png" }
+      = nav_menu
+    #content_row.row-fluid
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
-    %script{:src => "galleria/galleria-1.2.9.min.js"}
-    = js_assets 'base'
+    %script{:type => "text/javascript", :src => "/javascripts/galleria/galleria-1.2.9.min.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/base.min.js"}
