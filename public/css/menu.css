@@ -90,8 +90,7 @@ ul.sdt_menu li div.sdt_box {
   height: 170px;
   top: 85px;
   left: 0px;
-  display: none;
-  background: black; }
+  display: none; }
 
 ul.sdt_menu li div.sdt_box a {
   float: left;

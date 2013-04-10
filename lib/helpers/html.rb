@@ -6,7 +6,7 @@ module Sinatra::HtmlHelpers
   def vertical_menu
     <<-NAV
       <ul id="sdt_menu" class="sdt_menu side-menu">
-        <li id="side_menu">
+        <li id="side_menu" class="skip-image">
           <a href="#" id="side_home">
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
@@ -15,11 +15,11 @@ module Sinatra::HtmlHelpers
             </span>
           </a>
           <div class="sdt_box">
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
-            <a href="#">Photos</a>
-            <a href="#">Contact</a>
-            <a href="#">Testimonials</a>
+            <a href="#" id="home">Home</a>
+            <a href="#" id="menu">Menu</a>
+            <a href="#" id="photos">Photos</a>
+            <a href="#" id="contact">Contact</a>
+            <a href="#" id="testimonials">Testimonials</a>
          </div>
         </li>
       </ul>

@@ -1,27 +1,40 @@
 $(function() {
+    var raise = '100px';
+    var width = '170px';
+    var height = '170px';
+    var wrap_height = '70px';
     $('#sdt_menu > li').bind('mouseenter',function(){
         var $elem = $(this);
+        if ($elem.hasClass('skip-image')) {
+          raise = '0px';
+          width = '0px';
+          height = '0px';
+          wrap_height = '0px';
+        }
         $elem.find('img')
              .stop(true)
              .animate({
-                'width':'170px',
-                'height':'170px',
+                'width':width,
+                'height':height,
                 'left':'0px'
              },400,'easeOutBack')
              .andSelf()
              .find('.sdt_wrap')
              .stop(true)
-             .animate({'top':'100px'},500,'easeOutBack')
+             .animate({'top':raise},500,'easeOutBack')
              .andSelf()
              .find('.sdt_active')
              .stop(true)
-             .animate({'height':'70px'},300,function(){
+             .animate({'height':wrap_height},300,function(){
             var $sub_menu = $elem.find('.sdt_box');
             if($sub_menu.length){
                 var left = '170px';
                 if($elem.parent().children().length == $elem.index()+1)
                     left = '170px';
-                $sub_menu.show().animate({'left':left},200);
+                $sub_menu.show().animate({
+                                  'left':left,
+                                   'top': '20'
+                },200);
             }   
         });
     }).bind('mouseleave',function(){
