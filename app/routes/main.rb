@@ -27,13 +27,16 @@ class Hogstock < Sinatra::Application
     haml :content
   end
 
-  post '/content' do
+  post '/contact' do
+    contact_name = params[:contact_name]
+    contact_mail = params[:contact_mail]
+    contact_body = params[:contact_body]
     mail = Mail.deliver do
       to EMAIL['sendgrid']['emails']
-      from params[:mail]
-      subject "#{params[:name]} has a question about Hogstock"
+      from contact_mail
+      subject "#{contact_name} has a question about Hogstock"
       html_part do
-        body params[:body]
+        body contact_body
       end
     end 
   "Email has been sent! Thank you, we will get back to you as soon as possible."

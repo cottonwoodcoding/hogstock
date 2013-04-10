@@ -118,5 +118,22 @@ $ ->
   contactHandler = ->
     $('#contact_form').bind 'submit', (e) ->
       e.preventDefault()
-      $.post "/contact", (data) ->
-        $('#contact_info').html(data)
+      $form = $(@)
+      $("#contact_info").hide()
+      $submitButton = $form.find('button')
+      $submitButton.html('Sending...')
+      $submitButton.attr("disabled", "disabled").addClass("disabled")
+      $.ajax
+        type: 'POST',
+        url: '/contact',
+        data: $form.serializeArray(),
+        success: (data) ->
+          $contentInfo = $("#contact_info")
+          $contentInfo.html(data).slideToggle()
+          $('#contact_form')[0].reset()
+          $submitButton.html("Send")
+          $submitButton.removeAttr("disabled").removeClass("disabled")
+        error: (data) ->
+          $submitButton.html("Send")
+          $submitButton.removeAttr("disabled").removeClass("disabled")
+          alert('email fail try again')

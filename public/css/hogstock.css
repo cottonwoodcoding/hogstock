@@ -37,6 +37,11 @@ body {
   margin-right: auto;
   max-width: 800px; }
 
+#contact_info {
+  padding-bottom: 30px;
+  display: none;
+  color: red; }
+
 .contact-name {
   font-size: 20px;
   text-align: left; }

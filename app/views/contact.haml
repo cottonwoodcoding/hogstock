@@ -11,10 +11,10 @@
     .contact-number   503-964-8858
   %form#contact_form{:method => "post"}
     %fieldset
-      %label.match-orange Name:
-      %input{:type => "text", :name => "name", :class => "text"}
+      %label.match-orange Full Name:
+      %input{:required => "required", :type => "text", :id => "contact_name", :name => "contact_name", :class => "text"}
       %label.match-orange E-mail:
-      %input{:type => "text", :name => "mail", :class => "text"}
+      %input{:required => "required", :type => "email", :id => "contact_mail", :name => "contact_mail", :class => "text"}
       %label.match-orange Message:
-      %textarea{:name => "body", :rows => "7"}
+      %textarea{:required => "required", :id => "contact_body", :name => "contact_body", :rows => "7"}
     %button{:type => "submit", :class => "btn"} Send

@@ -153,9 +153,30 @@
     });
     return contactHandler = function() {
       return $('#contact_form').bind('submit', function(e) {
+        var $form, $submitButton;
         e.preventDefault();
-        return $.post("/contact", function(data) {
-          return $('#contact_info').html(data);
+        $form = $(this);
+        $("#contact_info").hide();
+        $submitButton = $form.find('button');
+        $submitButton.html('Sending...');
+        $submitButton.attr("disabled", "disabled").addClass("disabled");
+        return $.ajax({
+          type: 'POST',
+          url: '/contact',
+          data: $form.serializeArray(),
+          success: function(data) {
+            var $contentInfo;
+            $contentInfo = $("#contact_info");
+            $contentInfo.html(data).slideToggle();
+            $('#contact_form')[0].reset();
+            $submitButton.html("Send");
+            return $submitButton.removeAttr("disabled").removeClass("disabled");
+          },
+          error: function(data) {
+            $submitButton.html("Send");
+            $submitButton.removeAttr("disabled").removeClass("disabled");
+            return alert('email fail try again');
+          }
         });
       });
     };
