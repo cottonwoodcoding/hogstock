@@ -1,5 +1,5 @@
     .st_main img.st_preview{
-      width:70%;
+      width:60%;
       height: 700px;
 
     }
@@ -23,7 +23,7 @@
       clear:both;
       margin-bottom:8px;
       position:relative;
-      width:100%;
+      width:97%;
     }
 
     ul.st_navigation li span.st_link{

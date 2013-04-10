@@ -1,4 +1,7 @@
 $ ->
+  $(window).resize ->
+    makeScrollable()
+
   buildThumbs = ->
     $list = $("#st_nav")
     $list.children("li.album").each ->
@@ -29,23 +32,23 @@ $ ->
 
   makeScrollable = ($outer, $inner) ->
     extra = 800
-  
+
     #Get menu width
     divWidth = $outer.width()
-  
+
     #Remove scrollbars
     $outer.css overflow: "hidden"
-  
+
     #Find last image in container
     lastElem = $inner.find("img:last")
     $outer.scrollLeft 0
-  
+
     #When user move mouse over menu
     $outer.unbind("mousemove").bind "mousemove", (e) ->
-      containerWidth = lastElem[0].offsetLeft + lastElem.outerWidth() + 2 * extra
+      containerWidth = lastElem[0].offsetLeft + lastElem.outerWidth() + 5 * extra
       left = (e.pageX - $outer.offset().left) * (containerWidth - divWidth) / divWidth - extra
       $outer.scrollLeft left
-  
+
   menuLinks = ['home', 'menu', 'photos', 'testimonials', 'contact']
   $menu = $('#menu_holder')
 
