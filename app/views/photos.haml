@@ -1,33 +1,31 @@
-#st_main.st_main
-  %img.st_preview{:alt => "", :src => "images/ribs.jpeg"}/
-  .st_overlay
-  %ul#st_nav.st_navigation
-    %li.album
-      .st_wrapper.st_thumbs_wrapper
-        .st_thumbs
-          %img{:alt => "images/autograph.jpeg", :src => "images/thumbs/autograph.jpeg"}/
-          %img{:alt => "images/chicken.jpg", :src => "images/thumbs/chicken.jpg"}/
-          %img{:alt => "images/chicken2.jpg", :src => "images/thumbs/chicken2.jpg"}/
-          %img{:alt => "images/chicken_rack.jpeg", :src => "images/thumbs/chicken_rack.jpeg"}/
-          %img{:alt => "images/chicken_rack2.jpeg", :src => "images/thumbs/chicken_rack2.jpeg"}/
-          %img{:alt => "images/cut.jpeg", :src => "images/thumbs/cut.jpeg"}/
-          %img{:alt => "images/fire.png", :src => "images/thumbs/fire.png"}/
-          %img{:alt => "images/kisspig.jpg", :src => "images/thumbs/kisspig.jpg"}/
-          %img{:alt => "images/marinating.jpeg", :src => "images/thumbs/marinating.jpeg"}/
-          %img{:alt => "images/pig.jpg", :src => "images/thumbs/pig.jpg"}/
-          %img{:alt => "images/pig1.jpg", :src => "images/thumbs/pig1.jpg"}/
-          %img{:alt => "images/pig10.jpeg", :src => "images/thumbs/pig10.jpeg"}/
-          %img{:alt => "images/pig11.jpeg", :src => "images/thumbs/pig11.jpeg"}/
-          %img{:alt => "images/pig2.jpg", :src => "images/thumbs/pig2.jpg"}/
-          %img{:alt => "images/pig3.jpg", :src => "images/thumbs/pig3.jpg"}/
-          %img{:alt => "images/pig4.jpg", :src => "images/thumbs/pig4.jpg"}/
-          %img{:alt => "images/pig5.jpg", :src => "images/thumbs/pig5.jpg"}/
-          %img{:alt => "images/pig6.jpg", :src => "images/thumbs/pig6.jpg"}/
-          %img{:alt => "images/pig7.jpg", :src => "images/thumbs/pig7.jpg"}/
-          %img{:alt => "images/pig8.jpg", :src => "images/thumbs/pig8.jpg"}/
-          %img{:alt => "images/pig9.jpeg", :src => "images/thumbs/pig9.jpeg"}/
-          %img{:alt => "images/ribs.jpeg", :src => "images/thumbs/ribs.jpeg"}/
-          %img{:alt => "images/sides.jpeg", :src => "images/thumbs/sides.jpeg"}/
-          %img{:alt => "images/smoking.jpeg", :src => "images/thumbs/smoking.jpeg"}/
-          %img{:alt => "images/smoking2.jpeg", :src => "images/thumbs/smoking2.jpeg"}/
-          %img{:alt => "images/whole_chicken.jpeg", :src => "images/thumbs/whole_chicken.jpeg"}/
+#galleria
+  %a{ href => "images/thumbs/autograph.jpeg", :src => "images/autograph.jpeg" data-title="", data-description=""}/
+  %a{ href => "images/thumbs/chicken.jpg", src => "images/chicken.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/chicken2.jpg", src => "images/chicken2.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/chicken_rack.jpeg", src => "images/chicken_rack.jpeg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/chicken_rac2.jpeg", src => "images/chicken_rack2.jpeg", data-title="", data-description=""}/ 
+  %a{ href => "images/thumbs/cut.jpeg", src => "images/cut.jpeg", data-title="", data-description=""}/ 
+  %a{ href => "images/thumbs/fire.png", src => "images/fire.png", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/kisspig.jpg", src => "images/kisspig.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/marinating.jpeg", src => "images/marinating.jpeg", data-title="", data-description=""}/ 
+  %a{ href => "images/thumbs/pig.jpg", src => "images/pig.jpg",  data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig1.jpg", src => "images/pig1.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig10.jpeg", src => "images/pig10.jpeg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig11.jpeg", src => "images/pig11.jpeg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig2.jpg", src => "images/pig2.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig3.jpg", src => "images/pig3.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig4.jpg", src => "images/pig4.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig5.jpg", src => "images/pig5.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig6.jpg", src => "images/pig6.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig7.jpg", src => "images/pig7.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig8.jpg", src => "images/pig8.jpg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/pig9.jpeg", src => "images/pig9.jpeg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/ribs.jpeg", src => "images/ribs.jpeg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/sides.jpeg", src => "images/sides.jpeg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/smoking.jpeg", src => "images/smoking.jpeg", data-title="", data-description=""}/
+  %a{ href => "images/thumbs/smoking2.jpeg", src => "images/smoking2.jpeg",  data-title="", data-description=""}/
+  %a{ href => "images/thumbs/whole_chicken.jpeg", src => "images/whole_chicken.jpeg", data-title="", data-description=""}/
+= <script>
+  Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+  Galleria.run('#galleria');
+</script>
