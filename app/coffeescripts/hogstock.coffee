@@ -49,10 +49,22 @@ $ ->
       left = (e.pageX - $outer.offset().left) * (containerWidth - divWidth) / divWidth - extra
       $outer.scrollLeft left
 
+  menuLinks = ['home', 'menu', 'photos', 'contact', 'testimonials']
+
+  sideMenuAction = (item) ->
+    $("##{item}_side").bind 'click', (e) ->
+      e.preventDefault()
+      $('#content_container').empty()
+      $.get "/#{item}", (data) ->
+        $(data).appendTo($('#content_container'))
+        if item == 'photos'
+          buildThumbs()
+          thumbClickHandlers()
 
   sideMenuHandler = ->
+    sideMenuAction(item) for item in menuLinks
     $("#sdt_menu > li.skip-image").bind("mouseenter", ->
-      $elem = $(this)
+      $elem = $(@)
       $sub_menu = $elem.find(".sdt_box")
       if $sub_menu.length
         left = "170px"
@@ -62,12 +74,10 @@ $ ->
           top: "20"
         , 200
     ).bind "mouseleave", ->
-      $elem = $(this)
+      $elem = $(@)
       $sub_menu = $elem.find(".sdt_box")
       $sub_menu.hide().css "left", "0px"  if $sub_menu.length
 
-
-  menuLinks = ['home', 'menu', 'photos', 'contact', 'testimonials']
   $menu = $('#menu_holder')
 
   menuAction = (item) ->
@@ -79,7 +89,7 @@ $ ->
         $content = $('#content')
         $content.css('margin-top', '2000px').css('text-align', 'center').css('margin-bottom', '30px')
         $.get "/#{item}", (data) ->
-          $(data).appendTo($content)
+          $(data).appendTo($('#content_container'))
           sideMenuHandler()
           if item == 'photos'
             buildThumbs()

@@ -15,11 +15,11 @@ module Sinatra::HtmlHelpers
             </span>
           </a>
           <div class="sdt_box">
-            <a href="#" id="home">Home</a>
-            <a href="#" id="menu">Menu</a>
-            <a href="#" id="photos">Photos</a>
-            <a href="#" id="contact">Contact</a>
-            <a href="#" id="testimonials">Testimonials</a>
+            <a href="#" id="home_side">Home</a>
+            <a href="#" id="menu_side">Menu</a>
+            <a href="#" id="photos_side">Photos</a>
+            <a href="#" id="contact_side">Contact</a>
+            <a href="#" id="testimonials_side">Testimonials</a>
          </div>
         </li>
       </ul>
