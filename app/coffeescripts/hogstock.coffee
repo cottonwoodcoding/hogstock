@@ -100,8 +100,8 @@ $ ->
           $(data).appendTo($('#content_container'))
           sideMenuHandler()
           if item == 'photos'
-            buildThumbs()
-            thumbClickHandler()
+            Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js')
+            Galleria.run('#galleria')
           if item == 'contact'
             contactHandler()
           $("html, body").animate
