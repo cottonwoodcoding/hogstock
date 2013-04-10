@@ -49,7 +49,7 @@ $ ->
       left = (e.pageX - $outer.offset().left) * (containerWidth - divWidth) / divWidth - extra
       $outer.scrollLeft left
 
-  menuLinks = ['home', 'menu', 'photos', 'testimonials', 'contact']
+  menuLinks = ['home', 'menu', 'photos', 'contact', 'testimonials']
   $menu = $('#menu_holder')
 
   menuAction =  (item) ->

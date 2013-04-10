@@ -17,3 +17,29 @@ body {
 
 #logo {
   text-align: center; }
+
+.match-orange {
+  color: #ffaa00; }
+
+.contact-info {
+  float: left; }
+
+.contact-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px; }
+
+.contact-name {
+  font-size: 20px;
+  text-align: left; }
+
+.contact-number {
+  fot-size: 16px;
+  text-align: left; }
+
+.contact-title {
+  font-size: 32px;
+  text-align: left; }
+
+.contact-info {
+  padding-top: 20px; }

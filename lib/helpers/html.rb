@@ -60,7 +60,7 @@ module Sinatra::HtmlHelpers
           </a>
         </li>
         <li>
-         <a href="#" id="testimonials">
+         <a href="#" id="contact">
           <img src="images/kisspig.jpg" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
@@ -70,7 +70,7 @@ module Sinatra::HtmlHelpers
           </a>
         </li>
         <li>
-         <a href="#" id="contact">
+         <a href="#" id="testimonials">
           <img src="images/pig1.jpg" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">

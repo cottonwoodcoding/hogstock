@@ -1,0 +1,20 @@
+.contact-container
+  %legend.contact-title.match-orange Contact Us:
+  .contact-wrapper
+    .contact-info
+      .contact-name.match-orange   Brandon Whitlow
+      %br 
+      .contact-number   503-708-2031 
+      %br 
+      .contact-name.match-orange   Lars Rivera
+      %br 
+      .contact-number   503-964-8858
+    %form{ :action => "", :method => "post"}
+      %fieldset
+        %label.match-orange Name:
+        %input{:type => "text", :name => "name", :class => "text"}
+        %label.match-orange E-mail:
+        %input{:type => "text", :name => "mail", :class => "text"}
+        %label.match-orange Message:
+        %textarea{:name => "body", :rows => "7"}
+      %button{:type => "submit", :class => "btn"} Send
