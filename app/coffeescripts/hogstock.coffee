@@ -82,8 +82,8 @@ $ ->
           $(data).appendTo($content)
           sideMenuHandler()
           if item == 'photos'
-            buildThumbs()
-            thumbClickHandler()
+            Galeria.loadTheme('galleria/themes/classic/galleria.classic.min.js')
+            Galleria.run('#galleria')
           $("html, body").animate
             scrollTop: $content.offset().top, "slow"
           $content.removeClass('hidden')
