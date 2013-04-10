@@ -26,4 +26,16 @@ class Hogstock < Sinatra::Application
   get '/content' do
     haml :content
   end
+
+  post '/content' do
+    mail = Mail.deliver do
+      to EMAIL['sendgrid']['emails']
+      from params[:mail]
+      subject "#{params[:name]} has a question about Hogstock"
+      html_part do
+        body params[:body]
+      end
+    end 
+  "Email has been sent! Thank you, we will get back to you as soon as possible."
+  end
 end

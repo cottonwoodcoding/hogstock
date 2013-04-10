@@ -2,7 +2,7 @@
 (function() {
 
   $(function() {
-    var $menu, buildThumbs, item, makeScrollable, menuAction, menuLinks, sideMenuHandler, thumbClickHandler, _i, _len;
+    var $menu, buildThumbs, contactHandler, item, makeScrollable, menuAction, menuLinks, sideHomeHandler, sideMenuAction, sideMenuHandler, thumbClickHandler, _i, _len;
     $(window).resize(function() {
       if ($("#st_nav").is(":visible")) {
         return makeScrollable();
@@ -60,7 +60,37 @@
         return $outer.scrollLeft(left);
       });
     };
+    sideHomeHandler = function() {
+      return $('#side_home').bind('click', function(e) {
+        e.preventDefault();
+        return $("html, body").animate({
+          scrollTop: 0
+        }, "slow", function() {
+          return $('#content_row').empty();
+        });
+      });
+    };
+    menuLinks = ['home', 'menu', 'photos', 'contact', 'testimonials'];
+    sideMenuAction = function(item) {
+      sideHomeHandler();
+      return $("#" + item + "_side").bind('click', function(e) {
+        e.preventDefault();
+        $('#content_container').empty();
+        return $.get("/" + item, function(data) {
+          $(data).appendTo($('#content_container'));
+          if (item === 'photos') {
+            buildThumbs();
+            return thumbClickHandlers();
+          }
+        });
+      });
+    };
     sideMenuHandler = function() {
+      var item, _i, _len;
+      for (_i = 0, _len = menuLinks.length; _i < _len; _i++) {
+        item = menuLinks[_i];
+        sideMenuAction(item);
+      }
       return $("#sdt_menu > li.skip-image").bind("mouseenter", function() {
         var $elem, $sub_menu, left;
         $elem = $(this);
@@ -84,7 +114,6 @@
         }
       });
     };
-    menuLinks = ['home', 'menu', 'photos', 'contact', 'testimonials'];
     $menu = $('#menu_holder');
     menuAction = function(item) {
       return $("#" + item).bind('click', function(e) {
@@ -96,11 +125,16 @@
           $content = $('#content');
           $content.css('margin-top', '2000px').css('text-align', 'center').css('margin-bottom', '30px');
           return $.get("/" + item, function(data) {
-            $(data).appendTo($content);
+            $(data).appendTo($('#content_container'));
             sideMenuHandler();
             if (item === 'photos') {
               Galeria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
               Galleria.run('#galleria');
+              buildThumbs();
+              thumbClickHandler();
+            }
+            if (item === 'contact') {
+              contactHandler();
             }
             $("html, body").animate({
               scrollTop: $content.offset().top
@@ -117,9 +151,17 @@
     $menu.mouseover(function() {
       return $(this).css('margin-top', '100px');
     });
-    return $menu.mouseout(function() {
+    $menu.mouseout(function() {
       return $(this).css('margin-top', '50px');
     });
+    return contactHandler = function() {
+      return $('#contact_form').bind('submit', function(e) {
+        e.preventDefault();
+        return $.post("/contact", function(data) {
+          return $('#contact_info').html(data);
+        });
+      });
+    };
   });
 
 }).call(this);
