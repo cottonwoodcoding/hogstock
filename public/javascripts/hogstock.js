@@ -122,7 +122,7 @@
           var $content;
           $('#content_row').append(data);
           $content = $('#content');
-          $content.css('margin-top', '2000px').css('text-align', 'center').css('margin-bottom', '30px');
+          $content.css('margin-top', '2000px').css('text-align', 'center').css('margin-bottom', '100px');
           return $.get("/" + item, function(data) {
             $(data).appendTo($('#content_container'));
             sideMenuHandler();
