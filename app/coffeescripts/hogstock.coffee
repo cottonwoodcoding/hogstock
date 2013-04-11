@@ -50,7 +50,7 @@ $ ->
       $outer.scrollLeft left
 
   sideHomeHandler = ->
-    $('#side_home').bind 'click', (e) ->
+    $('#side_home, #mini_logo').bind 'click', (e) ->
       e.preventDefault()
       $("html, body").animate
         scrollTop: 0, "slow", ->

@@ -60,7 +60,7 @@
       });
     };
     sideHomeHandler = function() {
-      return $('#side_home').bind('click', function(e) {
+      return $('#side_home, #mini_logo').bind('click', function(e) {
         e.preventDefault();
         return $("html, body").animate({
           scrollTop: 0

@@ -18,14 +18,15 @@ body {
 #logo {
   text-align: center; }
 
-#mini-logo {
+#mini_logo {
   width: 15%;
-  margin-bottom: -5%; }
+  margin-bottom: -5%;
+  cursor: pointer; }
 
 .logo-wrapper {
   margin-left: 20px; }
 
-.match-orange {
+.match-orange, #contact_info {
   color: #ffaa00; }
 
 .contact-info {
@@ -40,7 +41,7 @@ body {
 #contact_info {
   padding-bottom: 30px;
   display: none;
-  color: red; }
+  font-weight: bold; }
 
 .contact-name {
   font-size: 20px;
