@@ -9,7 +9,7 @@
     .contact-name.match-orange   Lars Rivera
     %br 
     .contact-number   503-964-8858
-  %form#contact_form{:method => "post"}
+  %form{:id => "contact_form", :method => "post"}
     %fieldset
       %label.match-orange Full Name:
       %input{:required => "required", :type => "text", :id => "contact_name", :name => "contact_name", :class => "text"}
@@ -17,4 +17,4 @@
       %input{:required => "required", :type => "email", :id => "contact_mail", :name => "contact_mail", :class => "text"}
       %label.match-orange Message:
       %textarea{:required => "required", :id => "contact_body", :name => "contact_body", :rows => "7"}
-    %button{:type => "submit", :class => "btn"} Send
+    %button{:id => "contact_button", :type => "submit", :class => "btn"} Send

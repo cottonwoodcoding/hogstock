@@ -66,8 +66,12 @@ $ ->
       $.get "/#{item}", (data) ->
         $(data).appendTo($('#content_container'))
         if item == 'photos'
-          buildThumbs()
-          thumbClickHandlers()
+          Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js')
+          Galleria.run('#galleria')
+        if item == 'contact'
+          contactHandler()
+      $("html, body").animate
+        scrollTop: $(document).height(), "slow"
 
   sideMenuHandler = ->
     sideMenuAction(item) for item in menuLinks

@@ -75,13 +75,19 @@
       return $("#" + item + "_side").bind('click', function(e) {
         e.preventDefault();
         $('#content_container').empty();
-        return $.get("/" + item, function(data) {
+        $.get("/" + item, function(data) {
           $(data).appendTo($('#content_container'));
           if (item === 'photos') {
-            buildThumbs();
-            return thumbClickHandlers();
+            Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
+            Galleria.run('#galleria');
+          }
+          if (item === 'contact') {
+            return contactHandler();
           }
         });
+        return $("html, body").animate({
+          scrollTop: $(document).height()
+        }, "slow");
       });
     };
     sideMenuHandler = function() {
