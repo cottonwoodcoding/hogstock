@@ -22,12 +22,12 @@ $(function() {
              .animate({'height':wrap_height},300,function(){
             var $sub_menu = $elem.find('.sdt_box');
             if($sub_menu.length){
-                var left = '170px';
+                var left = '100px';
                 if($elem.parent().children().length == $elem.index()+1)
-                    left = '170px';
+                    left = '100px';
                 $sub_menu.show().animate({
                                   'left':left,
-                                   'top': '20'
+                                   'top': '120'
                 },200);
             }   
         });

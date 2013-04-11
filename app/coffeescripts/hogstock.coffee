@@ -32,6 +32,47 @@ $ ->
     document.getElementById("testimonials_department").innerHTML = x.getElementsByTagName("department")[rndm].childNodes[0].nodeValue
     setInterval displayTestimonial, 10000
 
+  slideshow = ->
+    Page = (->
+      $navArrows = $("#nav-arrows").hide()
+      $navOptions = $("#nav-options").hide()
+      $shadow = $("#shadow").hide()
+      slicebox = $("#sb-slider").slicebox(
+        onReady: ->
+          $navArrows.show()
+          $navOptions.show()
+          $shadow.show()
+
+        orientation: "h"
+        cuboidsCount: 3
+      )
+      init = ->
+        initEvents()
+
+      initEvents = ->
+    
+        # add navigation events
+        $navArrows.children(":first").on "click", ->
+          slicebox.next()
+          false
+
+        $navArrows.children(":last").on "click", ->
+          slicebox.previous()
+          false
+
+        $("#navPlay").on "click", ->
+          slicebox.play()
+          false
+
+        $("#navPause").on "click", ->
+          slicebox.pause()
+          false
+
+
+      init: init
+    )()
+    Page.init() 
+
   $(window).resize ->
     makeScrollable() if $("#st_nav").is(":visible")
 
@@ -99,8 +140,7 @@ $ ->
       $.get "/#{item}", (data) ->
         $(data).appendTo($('#content_container'))
         if item == 'photos'
-          Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js')
-          Galleria.run('#galleria')
+          slideshow()
         if item == 'contact'
           contactHandler()
       $("html, body").animate
@@ -137,8 +177,7 @@ $ ->
           $(data).appendTo($('#content_container'))
           sideMenuHandler()
           if item == 'photos'
-            Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js')
-            Galleria.run('#galleria')
+            slideshow()
           if item == 'contact'
             contactHandler()
           if item == 'testimonials'
