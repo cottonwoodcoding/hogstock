@@ -10,7 +10,7 @@
         width: contentwidth
       });
       $(".accordion-header").first().toggleClass("active-header").toggleClass("inactive-header");
-      $(".accordion-content").first().slideDown().toggleClass("open-content");
+      $(".accordion-content").first().slideToggle().toggleClass("open-content");
       return $(".accordion-header").click(function() {
         if ($(this).is(".inactive-header")) {
           $(".active-header").toggleClass("active-header").toggleClass("inactive-header").next().slideToggle().toggleClass("open-content");
@@ -18,7 +18,7 @@
           return $(this).next().slideToggle().toggleClass("open-content");
         } else {
           $(this).toggleClass("active-header").toggleClass("inactive-header");
-          return $(this).next().slideToggle().toggleClass("open-content");
+          return $(this).next().hide().toggleClass("open-content");
         }
       });
     };

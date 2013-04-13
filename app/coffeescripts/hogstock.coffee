@@ -9,7 +9,7 @@ $ ->
 
     #Open The First Accordion Section When Page Loads
     $(".accordion-header").first().toggleClass("active-header").toggleClass "inactive-header"
-    $(".accordion-content").first().slideDown().toggleClass "open-content"
+    $(".accordion-content").first().slideToggle().toggleClass "open-content"
 
     # The Accordion Effect
     $(".accordion-header").click ->
@@ -19,7 +19,7 @@ $ ->
         $(@).next().slideToggle().toggleClass "open-content"
       else
         $(@).toggleClass("active-header").toggleClass "inactive-header"
-        $(@).next().slideToggle().toggleClass "open-content"
+        $(@).next().hide().toggleClass "open-content"
 
 
   testimonials = ->
