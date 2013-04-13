@@ -1,4 +1,26 @@
 $ ->
+  cateringMenu = ->
+    #Add Inactive Class To All Accordion Headers
+    $(".accordion-header").toggleClass "inactive-header"
+
+    #Set The Accordion Content Width
+    contentwidth = $(".accordion-header").width()
+    $(".accordion-content").css width: contentwidth
+
+    #Open The First Accordion Section When Page Loads
+    $(".accordion-header").first().toggleClass("active-header").toggleClass "inactive-header"
+    $(".accordion-content").first().slideDown().toggleClass "open-content"
+
+    # The Accordion Effect
+    $(".accordion-header").click ->
+      if $(@).is(".inactive-header")
+        $(".active-header").toggleClass("active-header").toggleClass("inactive-header").next().slideToggle().toggleClass "open-content"
+        $(@).toggleClass("active-header").toggleClass "inactive-header"
+        $(@).next().slideToggle().toggleClass "open-content"
+      else
+        $(@).toggleClass("active-header").toggleClass "inactive-header"
+        $(@).next().slideToggle().toggleClass "open-content"
+  
   testimonials = ->
     displayTestimonial = ->
       displayQuote = ->
@@ -139,6 +161,8 @@ $ ->
       $('#content_container').empty()
       $.get "/#{item}", (data) ->
         $(data).appendTo($('#content_container'))
+        if item == 'menu'
+          cateringMenu()
         if item == 'photos'
           slideshow()
         if item == 'contact'
@@ -176,6 +200,8 @@ $ ->
         $.get "/#{item}", (data) ->
           $(data).appendTo($('#content_container'))
           sideMenuHandler()
+          if item == 'menu'
+            cateringMenu()
           if item == 'photos'
             slideshow()
           if item == 'contact'

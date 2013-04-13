@@ -11,6 +11,7 @@ css:
     - bootstrap-responsive.min.css
     - hogstock.css 
     - menu.css
+    - vallenato.css
     - slicebox.css
     - custom.css
     - testimonials.css
