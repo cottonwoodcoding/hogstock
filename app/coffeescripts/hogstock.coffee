@@ -20,39 +20,11 @@ $ ->
       else
         $(@).toggleClass("active-header").toggleClass "inactive-header"
         $(@).next().slideToggle().toggleClass "open-content"
-  
+
+
   testimonials = ->
-    displayTestimonial = ->
-      displayQuote = ->
-        document.getElementById("testimonials_txt").innerHTML = x.getElementsByTagName("quote")[rndm].childNodes[0].nodeValue
-        document.getElementById("testimonials_name").innerHTML = x.getElementsByTagName("author")[rndm].childNodes[0].nodeValue
-        document.getElementById("testimonials_department").innerHTML = x.getElementsByTagName("department")[rndm].childNodes[0].nodeValue
-      $("#testimonials_container").fadeOut "slow"
-      rndm = rndnumber()
-      setTimeout displayQuote, 500
-      $("#testimonials_container").fadeIn "slow"
-    loadXMLdoc = ->
-      xmlDoc = undefined
-      if window.XMLHttpRequest
-        xmlDoc = new window.XMLHttpRequest()
-        xmlDoc.open "GET", "/xml/testimonials.xml", false
-        xmlDoc.send ""
-        return xmlDoc.responseXML
-      alert "Error loading document"
-    rndnumber = ->
-      randscript = -1
-      randscript = parseInt(Math.random() * (elementList.length + 1))  while randscript < 0 or randscript > elementList.length - 1
-      randscript
-    x = undefined
-    elementList = undefined
-    rndm = undefined
-    x = loadXMLdoc()
-    elementList = x.getElementsByTagName("id")
-    rndm = rndnumber()
-    document.getElementById("testimonials_txt").innerHTML = x.getElementsByTagName("quote")[rndm].childNodes[0].nodeValue
-    document.getElementById("testimonials_name").innerHTML = x.getElementsByTagName("author")[rndm].childNodes[0].nodeValue
-    document.getElementById("testimonials_department").innerHTML = x.getElementsByTagName("department")[rndm].childNodes[0].nodeValue
-    setInterval displayTestimonial, 10000
+    $("#testimonials1").cycle
+      fx: "fade" # choose your transition type, ex: fade, scrollUp, scrollRight, shuffle
 
   slideshow = ->
     Page = (->
@@ -72,7 +44,7 @@ $ ->
         initEvents()
 
       initEvents = ->
-    
+
         # add navigation events
         $navArrows.children(":first").on "click", ->
           slicebox.next()
@@ -93,7 +65,7 @@ $ ->
 
       init: init
     )()
-    Page.init() 
+    Page.init()
 
   $(window).resize ->
     makeScrollable() if $("#st_nav").is(":visible")
@@ -167,6 +139,8 @@ $ ->
           slideshow()
         if item == 'contact'
           contactHandler()
+        if item == 'testimonials'
+          testimonials()
       $("html, body").animate
         scrollTop: $(document).height(), "slow"
 
