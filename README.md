@@ -1,4 +1,4 @@
 Hogstock
 ========
 
-& Two Smokin' Barrels
+& Two Smoking Barrels
