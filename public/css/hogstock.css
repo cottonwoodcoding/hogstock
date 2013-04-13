@@ -24,7 +24,8 @@ body {
   cursor: pointer; }
 
 .logo-wrapper {
-  margin-left: 20px; }
+  margin-left: 20px;
+  display: inline-block; }
 
 .match-orange, #contact_info {
   color: #ffaa00; }
@@ -37,7 +38,8 @@ body {
   margin-right: auto;
   max-width: 840px;
   position: relative;
-  padding: 0 50px; }
+  padding: 0 50px;
+  display: inline-block; }
 
 #contact_info {
   padding-bottom: 30px;
