@@ -29,6 +29,10 @@ body {
   margin-bottom: -5%;
   cursor: pointer; }
 
+#about {
+  margin-top: 250px;
+  text-align: center; }
+
 .logo-wrapper {
   margin-left: 20px;
   display: inline-block; }
