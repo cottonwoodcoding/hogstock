@@ -137,7 +137,7 @@
         });
       });
     };
-    menuLinks = ['home', 'menu', 'photos', 'contact', 'testimonials'];
+    menuLinks = ['menu', 'photos', 'contact', 'testimonials'];
     sideMenuAction = function(item) {
       sideHomeHandler();
       return $("#" + item + "_side").bind('click', function(e) {

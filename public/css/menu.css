@@ -1,10 +1,9 @@
 ul.sdt_menu {
-  margin: 70px 0 0 auto;
+  margin: 0;
   padding: 0;
   list-style: none;
   font-family: "Myriad Pro", "Trebuchet MS", sans-serif;
-  font-size: 14px;
-  width: 1020px; }
+  font-size: 14px; }
 
 ul.sdt_menu a {
   text-decoration: none;

@@ -124,7 +124,7 @@ $ ->
         scrollTop: 0, "slow", ->
           $('#content_row').empty()
 
-  menuLinks = ['home', 'menu', 'photos', 'contact', 'testimonials']
+  menuLinks = ['menu', 'photos', 'contact', 'testimonials']
 
   sideMenuAction = (item) ->
     sideHomeHandler()
