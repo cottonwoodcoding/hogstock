@@ -27,7 +27,6 @@ module Sinatra::HtmlHelpers
 
   def nav_menu
     <<-NAV
-      <div id="main-nav">
       <ul id="sdt_menu" class="sdt_menu">
         <li>
           <a href="#" id="menu">
@@ -70,7 +69,6 @@ module Sinatra::HtmlHelpers
           </a>
         </li>
       </ul>
-      </div>
     NAV
   end
 end

@@ -1,17 +1,38 @@
 !!!
-%html
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+/ [if gt IE 8]><!
+%html.no-js
+  / <![endif]
   %head
-    %title Hogstock & Two Smokin' Barrels
-    <link href="/css/base.min.css" rel="stylesheet" type="text/css">
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title
+      Hogstock & 2 Smoking Barrels
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    :css
+      body {
+          padding-top: 60px;
+          padding-bottom: 40px;
+      }
+    %link{:href => "css/base.min.css", :rel => "stylesheet"}/
+    %script{:src => "/javascripts/modernizr-2.6.2-respond-1.1.0.min.js"}
   %body
-    .container
+    /[if lt IE 7]
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    / This code is taken from http://twitter.github.com/bootstrap/examples/hero.html
+    #top_container.container
       #logo
         %img{ :src => "/images/hogstocklogo.png" }
-      = nav_menu
+      #main-nav
+        = nav_menu
       #about
         %h3
           Down Home Gourmet BBQ Catering
     #content_row.row-fluid
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
-    %script{:type => "text/javascript", :src => "/javascripts/modernizr.custom.46884.js"}
+    :javascript
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
     %script{:type => "text/javascript", :src => "/javascripts/base.min.js"}

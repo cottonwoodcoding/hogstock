@@ -1,18 +1,17 @@
 js:
   base:
     - bootstrap.min.js
+    - jquery.cycle.js
     - jquery.easing.1.3.js
     - menu.js
-    - jquery.slicebox.js
-    - jquery.cycle.min.js
+    - rslides.min.js
     - hogstock.js
 css:
   base:
     - bootstrap.min.css
     - bootstrap-responsive.min.css
+    - rslides.css
     - hogstock.css 
     - menu.css
     - vallenato.css
-    - slicebox.css
-    - custom.css
     - testimonials.css

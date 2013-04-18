@@ -27,107 +27,18 @@ $ ->
       fx: "fade" # choose your transition type, ex: fade, scrollUp, scrollRight, shuffle
 
   slideshow = ->
-    Page = (->
-      $navArrows = $("#nav-arrows").hide()
-      $navOptions = $("#nav-options").hide()
-      $shadow = $("#shadow").hide()
-      slicebox = $("#sb-slider").slicebox(
-        onReady: ->
-          $navArrows.show()
-          $navOptions.show()
-          $shadow.show()
-
-        orientation: "h"
-        cuboidsCount: 3
-      )
-      init = ->
-        initEvents()
-
-      initEvents = ->
-
-        # add navigation events
-        $navArrows.children(":first").on "click", ->
-          slicebox.next()
-          false
-
-        $navArrows.children(":last").on "click", ->
-          slicebox.previous()
-          false
-
-        $("#navPlay").on "click", ->
-          slicebox.play()
-          false
-
-        $("#navPause").on "click", ->
-          slicebox.pause()
-          false
-
-
-      init: init
-    )()
-    Page.init()
-
-  $(window).resize ->
-    makeScrollable() if $("#st_nav").is(":visible")
-
-  buildThumbs = ->
-    $list = $("#st_nav")
-    $list.children("li.album").each ->
-      $elem = $(@)
-      $thumbs_wrapper = $elem.find(".st_thumbs_wrapper")
-      $thumbs = $thumbs_wrapper.children(":first")
-
-      finalW = $thumbs.find("img").length * 183
-      $thumbs.css "width", finalW + "px"
-
-      makeScrollable $thumbs_wrapper, $thumbs
-
-  thumbClickHandler = ->
-    $("#st_nav").find(".st_thumbs img").bind("click", ->
-      $this = $(@)
-      $("<img class=\"st_preview\"/>").load(->
-        $this = $(@)
-        $currImage = $("#st_main").children("img:first")
-        $this.insertBefore $currImage
-        $currImage.fadeOut 0, ->
-          $(@).remove()
-
-      ).attr "src", $this.attr("alt")
-    ).bind("mouseenter", ->
-      $(@).stop().animate opacity: "1"
-    ).bind "mouseleave", ->
-      $(@).stop().animate opacity: "0.7"
-
-  makeScrollable = ($outer, $inner) ->
-    extra = 800
-
-    #Get menu width
-    divWidth = $outer.width()
-
-    #Remove scrollbars
-    $outer.css overflow: "hidden"
-
-    #Find last image in container
-    lastElem = $inner.find("img:last")
-    $outer.scrollLeft 0
-
-    #When user move mouse over menu
-    $outer.unbind("mousemove").bind "mousemove", (e) ->
-      containerWidth = lastElem[0].offsetLeft + lastElem.outerWidth() + 5 * extra
-      left = (e.pageX - $outer.offset().left) * (containerWidth - divWidth) / divWidth - extra
-      $outer.scrollLeft left
+    $(".rslides").responsiveSlides()
 
   sideHomeHandler = ->
-    $('#side_home, #mini_logo').bind 'click', (e) ->
+    $('#side_home').bind 'click', (e) ->
       e.preventDefault()
       $("html, body").animate
-        scrollTop: 0, "slow", ->
+        scrollTop: 0, "fast", ->
           $('#content_row').empty()
 
   menuLinks = ['menu', 'photos', 'contact', 'testimonials']
 
   sideMenuAction = (item) ->
-    sideHomeHandler()
     $("##{item}_side").bind 'click', (e) ->
       e.preventDefault()
       $('#content_container').empty()
@@ -143,6 +54,7 @@ $ ->
           testimonials()
       $("html, body").animate
         scrollTop: $(document).height(), "slow"
+      slideHomeHandler()
 
   sideMenuHandler = ->
     sideMenuAction(item) for item in menuLinks
@@ -160,8 +72,6 @@ $ ->
       $elem = $(@)
       $sub_menu = $elem.find(".sdt_box")
       $sub_menu.hide().css "left", "0px"  if $sub_menu.length
-
-  $menu = $('#menu_holder')
 
   menuAction = (item) ->
     $("##{item}").bind 'click', (e) ->
@@ -187,11 +97,6 @@ $ ->
           $content.removeClass('hidden')
 
   menuAction(item) for item in menuLinks
-
-  $menu.mouseover ->
-    $(@).css('margin-top', '100px')
-  $menu.mouseout ->
-    $(@).css('margin-top', '50px')
 
   contactHandler = ->
     $('#contact_form').bind 'submit', (e) ->

@@ -3,7 +3,7 @@ $(function() {
     var width = '170px';
     var height = '170px';
     var wrap_height = '70px';
-    $('#sdt_menu > li').bind('mouseenter',function(){
+    $('#sdt_menu > li a').bind('mouseenter',function(){
         var $elem = $(this);
         $elem.find('img')
              .stop(true)
