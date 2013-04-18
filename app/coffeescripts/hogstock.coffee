@@ -23,11 +23,20 @@ $ ->
 
 
   testimonials = ->
-    $("#testimonials1").cycle
-      fx: "fade" # choose your transition type, ex: fade, scrollUp, scrollRight, shuffle
+   $(".bxslider").bxSlider
+     mode: "vertical"
+     slideMargin: 3
+     auto: true
 
   slideshow = ->
-    $(".rslides").responsiveSlides()
+    $(".rslides").responsiveSlides({
+      auto: false,
+      pager: false,
+      nav: true,
+      speed: 500,
+      maxwidth: 800,
+      namespace: "large-btns"
+    })
 
   sideHomeHandler = ->
     $('#side_home').bind 'click', (e) ->

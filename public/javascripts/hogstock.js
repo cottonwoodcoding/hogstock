@@ -23,12 +23,21 @@
       });
     };
     testimonials = function() {
-      return $("#testimonials1").cycle({
-        fx: "fade"
+      return $(".bxslider").bxSlider({
+        mode: "vertical",
+        slideMargin: 3,
+        auto: true
       });
     };
     slideshow = function() {
-      return $(".rslides").responsiveSlides();
+      return $(".rslides").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        maxwidth: 800,
+        namespace: "large-btns"
+      });
     };
     sideHomeHandler = function() {
       return $('#side_home').bind('click', function(e) {

@@ -3,6 +3,7 @@ js:
     - bootstrap.min.js
     - jquery.cycle.js
     - jquery.easing.1.3.js
+    - jquery.bxslider.min.js
     - menu.js
     - rslides.min.js
     - hogstock.js
@@ -10,7 +11,9 @@ css:
   base:
     - bootstrap.min.css
     - bootstrap-responsive.min.css
+    - jquery.bxslider.css
     - rslides.css
+    - rslides-custom.css
     - hogstock.css 
     - menu.css
     - vallenato.css

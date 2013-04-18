@@ -25,9 +25,7 @@ body {
   text-align: center; }
 
 #mini_logo {
-  width: 15%;
-  margin-bottom: -5%;
-  cursor: pointer; }
+  width: 20%; }
 
 #about {
   margin-top: 250px;
@@ -49,7 +47,8 @@ body {
   max-width: 840px;
   position: relative;
   padding: 0 50px;
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
 
 #top_container {
   min-width: 688px; }
