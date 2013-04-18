@@ -42,8 +42,8 @@ $ ->
     $('#side_home').bind 'click', (e) ->
       e.preventDefault()
       $("html, body").animate
-        scrollTop: 0, "fast", ->
-          $('#content_row').empty()
+        scrollTop: 0, "fast"
+      $('#content_row').empty()
 
   menuLinks = ['menu', 'photos', 'contact', 'testimonials']
 
@@ -63,7 +63,7 @@ $ ->
           testimonials()
       $("html, body").animate
         scrollTop: $(document).height(), "slow"
-      slideHomeHandler()
+    sideHomeHandler()
 
   sideMenuHandler = ->
     sideMenuAction(item) for item in menuLinks

@@ -42,16 +42,15 @@
     sideHomeHandler = function() {
       return $('#side_home').bind('click', function(e) {
         e.preventDefault();
-        return $("html, body").animate({
+        $("html, body").animate({
           scrollTop: 0
-        }, "fast", function() {
-          return $('#content_row').empty();
-        });
+        }, "fast");
+        return $('#content_row').empty();
       });
     };
     menuLinks = ['menu', 'photos', 'contact', 'testimonials'];
     sideMenuAction = function(item) {
-      return $("#" + item + "_side").bind('click', function(e) {
+      $("#" + item + "_side").bind('click', function(e) {
         e.preventDefault();
         $('#content_container').empty();
         $.get("/" + item, function(data) {
@@ -69,11 +68,11 @@
             return testimonials();
           }
         });
-        $("html, body").animate({
+        return $("html, body").animate({
           scrollTop: $(document).height()
         }, "slow");
-        return slideHomeHandler();
       });
+      return sideHomeHandler();
     };
     sideMenuHandler = function() {
       var item, _i, _len;
