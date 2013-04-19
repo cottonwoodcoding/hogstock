@@ -17,6 +17,8 @@
           padding-top: 60px;
           padding-bottom: 40px;
       }
+      
+    %link{:href => "css/vendor.min.css", :rel => "stylesheet"}/
     %link{:href => "css/base.min.css", :rel => "stylesheet"}/
     %script{:src => "/javascripts/modernizr-2.6.2-respond-1.1.0.min.js"}
   %body
@@ -25,7 +27,7 @@
     / This code is taken from http://twitter.github.com/bootstrap/examples/hero.html
     #top_container.container
       #logo
-        %img{ :src => "/images/hogstocklogo.png" }
+        %img{ :src => "/images/hogstock/hogstocklogo.png" }
       #main-nav
         = nav_menu
       #about
@@ -34,5 +36,6 @@
     #content_row.row-fluid
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
     :javascript
-        window.jQuery || document.write('<script src="/javascripts/jquery-1.9.1.min.js"><\/script>')
+      window.jQuery || document.write('<script src="/javascripts/jquery-1.9.1.min.js"><\/script>')
+    %script{:type => "text/javascript", :src => "/javascripts/vendor.min.js"}
     %script{:type => "text/javascript", :src => "/javascripts/base.min.js"}

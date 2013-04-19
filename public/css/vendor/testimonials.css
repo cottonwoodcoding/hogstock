@@ -8,7 +8,6 @@
 #testimonials1 blockquote, #testimonials2 blockquote {
   padding: 10px;
   width: 300px !important;
-  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   color: gray;
   display: block; }
@@ -39,7 +38,7 @@ blockquote {
   padding: 10px 10px 0 50px;
   position: relative;
   quotes: none;
-  background: url(/images/open-quote.png) 0 0 no-repeat;
+  background: url(/images/testimonials/open-quote.png) 0 0 no-repeat;
   border: 0px;
   font-size: 120%;
   line-height: 200%; }

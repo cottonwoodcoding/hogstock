@@ -1,8 +1,4 @@
 module Sinatra::HtmlHelpers
-  def h(str)
-    Rack::Utils.escape_html(str)
-  end
-  
   def vertical_menu
     <<-NAV
       <ul id="sdt_menu" class="sdt_menu side-menu">
@@ -30,7 +26,7 @@ module Sinatra::HtmlHelpers
       <ul id="sdt_menu" class="sdt_menu">
         <li>
           <a href="#" id="menu">
-            <img src="images/smoking.jpeg" alt=""/>
+            <img src="images/hogstock/smoking.jpeg" alt=""/>
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
               <span class="sdt_link">Menu</span>
@@ -40,7 +36,7 @@ module Sinatra::HtmlHelpers
         </li>
         <li>
          <a href="#" id="photos">
-          <img src="images/fire.png" alt=""/>
+          <img src="images/hogstock/fire.png" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
             <span class="sdt_link">Photos</span>
@@ -50,7 +46,7 @@ module Sinatra::HtmlHelpers
         </li>
         <li>
          <a href="#" id="contact">
-          <img src="images/kisspig.jpg" alt=""/>
+          <img src="images/hogstock/kisspig.jpg" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
             <span class="sdt_link">Contact</span>
@@ -60,7 +56,7 @@ module Sinatra::HtmlHelpers
         </li>
         <li>
          <a href="#" id="testimonials">
-          <img src="images/pig1.jpg" alt=""/>
+          <img src="images/hogstock/pig1.jpg" alt=""/>
           <span class="sdt_active"></span>
           <span class="sdt_wrap">
             <span class="sdt_link">Testimonials</span>

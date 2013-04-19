@@ -23,7 +23,7 @@
 	-moz-border-radius: 5px 5px 0 0;
 	-webkit-border-radius: 5px 5px 0 0;
 	border-radius: 5px 5px 0 0;
-	background: url(../images/active-header.gif) #ffaa00;
+	background: url(../images/catering-menu/active-header.gif) #ffaa00;
 	background-repeat: no-repeat;
 	background-position: right 50%;
   opacity: 0.8;
@@ -31,21 +31,21 @@
 }
 
 .active-header:hover {
-	background: url(../images/active-header.gif) #ffaa00;
+	background: url(../images/catering-menu/active-header.gif) #ffaa00;
 	background-repeat: no-repeat;
 	background-position: right 50%;
   opacity: 0.8;
 }
 
 .inactive-header {
-	background: url(../images/inactive-header.gif) #000000;
+	background: url(../images/catering-menu/inactive-header.gif) #000000;
 	background-repeat: no-repeat;
 	background-position: right 50%;
   opacity: 0.8;
 }
 
 .inactive-header:hover {
-	background: url(../images/inactive-header.gif) #000000;
+	background: url(../images/catering-menu/inactive-header.gif) #000000;
 	background-repeat: no-repeat;
 	background-position: right 50%;
   opacity: 0.8;
@@ -64,5 +64,6 @@
 .menu-item {
   line-height: 30px;
   font-size: 16px;
+  list-style: none;
 }
 
