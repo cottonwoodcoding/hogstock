@@ -1,6 +1,4 @@
 #accordion-container {
-  width: 700px;
-	font-size: 13px;
 	background: transparent;
 	padding: 5px 10px 10px 10px;
 	-moz-border-radius: 5px;
@@ -29,6 +27,7 @@
 	background-repeat: no-repeat;
 	background-position: right 50%;
   opacity: 0.8;
+  color: black
 }
 
 .active-header:hover {
@@ -61,3 +60,9 @@
 	-webkit-border-radius: 0 0.8px 5px;
 	border-radius: 0 0.8px 5px;
 }
+
+.menu-item {
+  line-height: 30px;
+  font-size: 16px;
+}
+

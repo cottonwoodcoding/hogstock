@@ -3,10 +3,6 @@ $ ->
     #Add Inactive Class To All Accordion Headers
     $(".accordion-header").toggleClass "inactive-header"
 
-    #Set The Accordion Content Width
-    contentwidth = $(".accordion-header").width()
-    $(".accordion-content").css width: contentwidth
-
     #Open The First Accordion Section When Page Loads
     $(".accordion-header").first().toggleClass("active-header").toggleClass "inactive-header"
     $(".accordion-content").first().slideToggle().toggleClass "open-content"
@@ -30,10 +26,10 @@ $ ->
 
   slideshow = ->
     $(".rslides").responsiveSlides({
-      auto: false,
+      auto: true,
       pager: false,
       nav: true,
-      speed: 500,
+      speed: 300,
       maxwidth: 800,
       namespace: "large-btns"
     })
@@ -74,8 +70,7 @@ $ ->
         left = "170px"
         left = "170px"  if $elem.parent().children().length is $elem.index() + 1
         $sub_menu.show().animate
-          left: left
-          top: "20"
+          top: "80"
         , 200
     ).bind "mouseleave", ->
       $elem = $(@)

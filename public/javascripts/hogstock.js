@@ -3,12 +3,7 @@
   $(function() {
     var cateringMenu, contactHandler, item, menuAction, menuLinks, sideHomeHandler, sideMenuAction, sideMenuHandler, slideshow, testimonials, _i, _len;
     cateringMenu = function() {
-      var contentwidth;
       $(".accordion-header").toggleClass("inactive-header");
-      contentwidth = $(".accordion-header").width();
-      $(".accordion-content").css({
-        width: contentwidth
-      });
       $(".accordion-header").first().toggleClass("active-header").toggleClass("inactive-header");
       $(".accordion-content").first().slideToggle().toggleClass("open-content");
       return $(".accordion-header").click(function() {
@@ -31,10 +26,10 @@
     };
     slideshow = function() {
       return $(".rslides").responsiveSlides({
-        auto: false,
+        auto: true,
         pager: false,
         nav: true,
-        speed: 500,
+        speed: 300,
         maxwidth: 800,
         namespace: "large-btns"
       });
@@ -90,8 +85,7 @@
             left = "170px";
           }
           return $sub_menu.show().animate({
-            left: left,
-            top: "20"
+            top: "80"
           }, 200);
         }
       }).bind("mouseleave", function() {
