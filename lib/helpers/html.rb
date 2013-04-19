@@ -7,7 +7,7 @@ module Sinatra::HtmlHelpers
             <span class="sdt_active"></span>
             <span class="sdt_wrap">
               <span class="sdt_link">Main Menu</span>
-              <span class="sdt_descr"></span>
+              <span class="sdt_descr">Go To Top</span>
             </span>
           </a>
           <div class="sdt_box">
