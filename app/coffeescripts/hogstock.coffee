@@ -17,13 +17,6 @@ $ ->
         $(@).toggleClass("active-header").toggleClass "inactive-header"
         $(@).next().hide().toggleClass "open-content"
 
-
-  testimonials = ->
-   $(".bxslider").bxSlider
-     mode: "vertical"
-     slideMargin: 3
-     auto: true
-
   slideshow = ->
     $(".rslides").responsiveSlides({
       auto: true,
@@ -55,8 +48,6 @@ $ ->
           slideshow()
         if item == 'contact'
           contactHandler()
-        if item == 'testimonials'
-          testimonials()
       $("html, body").animate
         scrollTop: $(document).height(), "slow"
     sideHomeHandler()
@@ -94,8 +85,6 @@ $ ->
             slideshow()
           if item == 'contact'
             contactHandler()
-          if item == 'testimonials'
-            testimonials()
           $("html, body").animate
             scrollTop: $content.offset().top, "slow"
           $content.removeClass('hidden')

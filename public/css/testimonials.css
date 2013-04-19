@@ -1,14 +1,45 @@
-blockquote
-{
-    clear: both;
-    font-style: italic;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 10px 10px 0 50px;
-    position: relative;
-    quotes: none;
-    background: url(/images/open-quote.png) 0 0 no-repeat;
-    border: 0px;
-    font-size: 120%;
-    line-height: 200%;
-}
+#testimonials1, #testimonials2 {
+  width: 330px;
+  background: #e7e9e6;
+  opacity: 0.8;
+  border: 1px solid #d8d9d6;
+  margin: 10px 0; }
+
+#testimonials1 blockquote, #testimonials2 blockquote {
+  padding: 10px;
+  width: 300px !important;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  color: gray;
+  display: block; }
+
+#testimonials1 blockquote p, #testimonials2 blockquote p {
+  margin: 0 !important;
+  padding: 5px !important; }
+
+#testimonials1 blockquote cite, #testimonials2 blockquote cite {
+  font-style: normal;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic;
+  color: #555555;
+  padding-left: 5px;
+  margin-top: 10px; }
+
+.bxslider {
+  height: 330px;
+  overflow: scroll; }
+
+blockquote {
+  clear: both;
+  font-style: italic;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 10px 0 50px;
+  position: relative;
+  quotes: none;
+  background: url(/images/open-quote.png) 0 0 no-repeat;
+  border: 0px;
+  font-size: 120%;
+  line-height: 200%; }
