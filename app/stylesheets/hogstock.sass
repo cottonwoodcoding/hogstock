@@ -1,3 +1,35 @@
+$twentypx: 20px
+
+@mixin margins($top: 0, $right: 0, $bottom: 0, $left: 0)
+  margin-top: $top
+  margin-right: $right
+  margin-bottom: $bottom
+  margin-left: $left
+
+@mixin text-align($alignment)
+  text-align: $alignment
+
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0)
+  padding-top: $top
+  padding-right: $right
+  padding-bottom: $bottom
+  padding-left: $left
+
+@mixin width-height($width: none, $height: none)
+  width: $width
+  height: $height
+
+@mixin min-width-height($width: none, $height: none)
+  min-width: $width
+  min-height: $height
+
+@mixin max-width-height($width: none, $height: none)
+  max-width: $width
+  max-height: $height
+
+@mixin font-size($size: 12px)
+  font-size: $size
+
 html
   background: url("../images/hogstock/background.png") no-repeat center center fixed
   -webkit-background-size: cover
@@ -10,88 +42,73 @@ body
   color: white
 
 #main-nav
-  max-width: 700px
-  margin-left: auto
-  margin-right: auto
-  margin-top: 70px
+  @include max-width-height(700px)
+  @include margins(70px, auto, 0, auto)
 
 #menu_holder
-  margin-top: 60px
+  @include margins(60px)
 
 #logo
-  text-align: center
+  @include text-align(center)
 
 #mini_logo
-  width: 350px
-  height: 90px
+  @include width-height(350px, 90px)
 
 #about
-  margin-top: 250px
-  text-align: center
+  @include margins(250px)
+  @include text-align(center)
 
 #content_container
-  width: 50%
-  float: left
-  min-width: 575px
-  margin-left: 100px
+  @include width-height(50%)
+  @include min-width-height(575px)
+  @include margins(0, 0, 0, 100px)
 
 #content_row
-  min-width: 1160px 
+  @include min-width-height(1160px)
 
 #top_container
-  min-width: 688px
+  @include min-width-height(688px)
 
 #contact_info
-  padding-bottom: 30px
-  display: none
+  @include padding(0, 0, 30px, 0)
+  @extend .hidden
   @extend .match-orange
   font-weight: bold
 
 #side-nav
-  float: left
   width: 25%
   min-width: 300px
+  .logo-wrapper
+    @include margins(0, 0, 0, $twentypx)
 
 #contact_body
   width: 380px
   resize: none
 
 #contact_button
-  margin-left: 490px
+  @include margins(0, 0, 0, 490px)
+
+#contact-wrapper
+  #contact-name
+    @include font-size($twentypx)
+  #contact-number
+    @include font-size(16px)
+  #contact-title
+    @include font-size(32px)
+  .contact-info
+    @include text-align(left)
+    @include padding($twentypx)
 
 .hidden
   display: none
 
-.logo-wrapper
-  margin-left: 20px
-
 .match-orange
   color: #ffaa00
 
-.contact-info
-  float: left
-
-.contact-name
-  font-size: 20px
-  text-align: left
-
-.contact-number
-  font-size: 16px
-  text-align: left
-
-.contact-title
-  font-size: 32px
-  text-align: left
-
-.contact-info
-  padding-top: 20px
-
 .menu-container
-  margin-left: auto
-  margin-right: auto
-  max-width: 400px
+  @include margins(0, auto, 0 auto)
+  @include max-width-height(400px)
 
 .menu-header
-  font-size: 32px
-  padding-bottom: 3%
-  padding-top: 3%
+  @include font-size(32px)
+  @include padding(3%, 0, 3%, 0)

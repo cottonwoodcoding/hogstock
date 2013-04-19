@@ -2,6 +2,7 @@
 (function() {
   $(function() {
     var cateringMenu, contactHandler, item, menuAction, menuLinks, sideHomeHandler, sideMenuAction, sideMenuHandler, slideshow, _i, _len;
+    menuLinks = ['menu', 'photos', 'contact', 'testimonials'];
     cateringMenu = function() {
       $(".accordion-header").toggleClass("inactive-header");
       $(".accordion-header").first().toggleClass("active-header").toggleClass("inactive-header");
@@ -36,7 +37,6 @@
         return $('#content_row').empty();
       });
     };
-    menuLinks = ['menu', 'photos', 'contact', 'testimonials'];
     sideMenuAction = function(item) {
       $("#" + item + "_side").bind('click', function(e) {
         e.preventDefault();

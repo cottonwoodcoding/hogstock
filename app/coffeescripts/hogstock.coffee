@@ -1,4 +1,6 @@
 $ ->
+  menuLinks = ['menu', 'photos', 'contact', 'testimonials']
+
   cateringMenu = ->
     #Add Inactive Class To All Accordion Headers
     $(".accordion-header").toggleClass "inactive-header"
@@ -33,8 +35,6 @@ $ ->
       $("html, body").animate
         scrollTop: 0, "fast"
       $('#content_row').empty()
-
-  menuLinks = ['menu', 'photos', 'contact', 'testimonials']
 
   sideMenuAction = (item) ->
     $("##{item}_side").bind 'click', (e) ->
