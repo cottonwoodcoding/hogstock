@@ -35,6 +35,8 @@
   margin-right 20px; }
 
 blockquote {
+  border: white;
+  border-style: solid;
   clear: both;
   font-style: italic;
   margin-left: 10px;
@@ -43,6 +45,5 @@ blockquote {
   position: relative;
   quotes: none;
   background: url(/images/testimonials/open-quote.png) 0 0 no-repeat;
-  border: 0px;
   font-size: 120%;
   line-height: 200%; }
