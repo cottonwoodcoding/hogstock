@@ -17,6 +17,15 @@ Mail.defaults do
                            :enable_starttls_auto => EMAIL['sendgrid']['starttls_auto'] }
 end
 
+#require_relative 1.8 workaround
+unless Kernel.respond_to?(:require_relative)
+  module Kernel
+    def require_relative(path)
+      require File.join(File.dirname(caller[0]), path.to_str)
+    end
+  end
+end
+
 class Hogstock < Sinatra::Application
   register Sinatra::Minify
   helpers Sinatra::HtmlHelpers
