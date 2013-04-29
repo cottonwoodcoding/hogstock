@@ -20,13 +20,8 @@ $ ->
         $(@).next().hide().toggleClass "open-content"
 
   slideshow = ->
-    $(".rslides").responsiveSlides({
-      auto: true,
-      pager: false,
-      nav: true,
-      speed: 300,
-      maxwidth: 800,
-      namespace: "large-btns"
+    $("#slideshow").carousel({
+      interval: 3000
     })
 
   sideHomeHandler = ->

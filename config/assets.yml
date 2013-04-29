@@ -1,10 +1,8 @@
 js:
   vendor:
     - vendor/bootstrap.min.js
-    - vendor/jquery.cycle.js
     - vendor/jquery.easing.1.3.js
     - vendor/menu.js
-    - vendor/rslides.min.js
     
   base:
     - hogstock.js
@@ -12,8 +10,6 @@ css:
   vendor:
     - vendor/bootstrap.min.css
     - vendor/bootstrap-responsive.min.css
-    - vendor/rslides.css
-    - vendor/rslides-custom.css
     - vendor/menu.css
     - vendor/vallenato.css
     - vendor/testimonials.css

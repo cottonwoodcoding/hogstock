@@ -1,57 +1,55 @@
 %h2.match-orange
   Photo Gallery:
 %hr
-.rslides_container
-  %ul.rslides
-    %li
-      %img{:src => "images/hogstock/fire.png", :alt => ""}/
-    %li
-      %img{:src => "images/hogstock/chicken.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/chicken2.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/chicken_rack.jpeg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/chicken_rack2.jpeg", :alt => ""}/ 
-    %li  
-      %img{:src => "images/hogstock/cut.jpeg", :alt => ""}/ 
-    %li  
-      %img{:src => "images/hogstock/autograph.jpeg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/kisspig.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/marinating.jpeg", :alt => ""}/ 
-    %li  
-      %img{:src => "images/hogstock/pig.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig1.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig10.jpeg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig11.jpeg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig2.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig3.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig4.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig5.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig6.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig7.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig8.jpg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/pig9.jpeg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/ribs.jpeg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/sides.jpeg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/smoking.jpeg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/smoking2.jpeg", :alt => ""}/
-    %li  
-      %img{:src => "images/hogstock/whole_chicken.jpeg", :alt => ""}/
+#slideshow.carousel.slide
+  .carousel-inner
+    .item.active
+      %img{:alt => "", :src => "images/hogstock/fire.png"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/chicken.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/chicken2.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/chicken_rack.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/chicken_rack2.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/cut.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/autograph.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/kisspig.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/marinating.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig11.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig2.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig3.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig4.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig5.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig6.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig7.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig8.jpg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/pig9.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/ribs.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/sides.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/smoking.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/smoking2.jpeg"}/
+    .item
+      %img{:alt => "", :src => "images/hogstock/whole_chicken.jpeg"}/
+  %a.left.carousel-control{"data-slide" => "prev", :href => "#slideshow"} ‹
+  %a.right.carousel-control{"data-slide" => "next", :href => "#slideshow"} ›
