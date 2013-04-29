@@ -25,6 +25,7 @@ class Hogstock < Sinatra::Application
   set :root, 'app', File.dirname(__FILE__) 
   set :js_path, 'public/javascripts'
   set :js_url, '/javascripts'
+  set :environment, :production
 
   require_relative 'app/routes/init'
 end
