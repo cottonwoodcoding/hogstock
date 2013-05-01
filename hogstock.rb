@@ -37,4 +37,8 @@ class Hogstock < Sinatra::Application
   set :environment, :production
 
   require_relative 'app/routes/init'
+
+  before do
+    expires 5001, :public_folder, :must_revalidate
+  end
 end
