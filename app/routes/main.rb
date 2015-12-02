@@ -31,7 +31,6 @@ class Hogstock < Sinatra::Application
     contact_name = params[:contact_name]
     contact_mail = params[:contact_mail]
     contact_body = params[:contact_body]
-    binding.pry
     mail = Mail.deliver do
       to ENV['emails']
       from contact_mail
