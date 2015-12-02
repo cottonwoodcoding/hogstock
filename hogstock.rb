@@ -5,7 +5,6 @@ require 'rack/contrib'
 require 'yaml'
 require 'haml'
 require 'mail'
-require 'pry'
 require File.expand_path(File.dirname(__FILE__) + '/lib/helpers/html')
 EMAIL_CONFIG = File.expand_path(File.dirname(__FILE__) + '/config/email.yml')
 if File.exists?(EMAIL_CONFIG)
