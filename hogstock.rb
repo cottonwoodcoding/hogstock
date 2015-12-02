@@ -5,16 +5,24 @@ require 'rack/contrib'
 require 'yaml'
 require 'haml'
 require 'mail'
+require 'pry'
 require File.expand_path(File.dirname(__FILE__) + '/lib/helpers/html')
-EMAIL = YAML.load_file(File.expand_path(File.dirname(__FILE__) + '/config/email.yml'))
+EMAIL_CONFIG = File.expand_path(File.dirname(__FILE__) + '/config/email.yml')
+if File.exists?(EMAIL_CONFIG)
+  YAML.load_file(EMAIL_CONFIG).each do |key, value|
+    ENV[key] = value
+  end
+end
+
+
 Mail.defaults do
-  delivery_method :smtp, { :address   => EMAIL['sendgrid']['address'],
-                           :port      => EMAIL['sendgrid']['port'],
-                           :domain    => EMAIL['sendgrid']['domain'],
-                           :user_name => EMAIL['sendgrid']['username'],
-                           :password  => EMAIL['sendgrid']['password'],
-                           :authentication => EMAIL['sendgrid']['authentication'],
-                           :enable_starttls_auto => EMAIL['sendgrid']['starttls_auto'] }
+  delivery_method :smtp, { :address   => 'smtp.sendgrid.net',
+                           :port      => '587',
+                           :domain    => 'hogstock.com',
+                           :user_name => ENV['sendgrid_username'],
+                           :password  => ENV['sendgrid_password'],
+                           :authentication => 'plain',
+                           :enable_starttls_auto => true }
 end
 
 #require_relative 1.8 workaround

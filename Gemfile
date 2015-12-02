@@ -7,3 +7,4 @@ gem "thin"
 gem "rack-contrib"
 gem "haml"
 gem "mail"
+gem 'pry'

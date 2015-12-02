@@ -1,9 +1,0 @@
-sendgrid: 
-  username: hogstock
-  password: speedfreak1000
-  emails: 'jakesorce@gmail.com, djungst@gmail.com, brandon@hogstock.com, lars@hogstock.com'
-  address: smtp.sendgrid.net
-  port: 587
-  domain: hogstock.com
-  authentication: plain
-  starttls_auto: true
